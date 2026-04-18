@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia&family=Courier+Prime:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Georgia", serif;
+  --font-mono: "Courier Prime", "Courier New", Courier, monospace;
+
+  --color-paper: #F9F8F6;
+  --color-ink: #1A1A1A;
+  --color-grey: #666666;
+  --color-border: #E5E5E1;
+  --color-accent-soft: rgba(197, 160, 89, 0.1);
+
+  --color-navy: #002147;
+  --color-navy-50: #f0f7ff;
+  --color-navy-100: #e0effe;
+  --color-navy-200: #bae0fd;
+  --color-navy-300: #7cc8fc;
+  --color-navy-400: #36adf8;
+  --color-navy-500: #0c92eb;
+  --color-navy-600: #0074c7;
+  --color-navy-700: #015ca1;
+  --color-navy-800: #064e85;
+  --color-navy-900: #0a426e;
+  --color-navy-950: #072b49;
+
+  --color-gold: #C5A059;
+  --color-gold-50: #fdfaf3;
+  --color-gold-100: #f9f1df;
+  --color-gold-200: #f2e3be;
+  --color-gold-300: #ebcf8e;
+  --color-gold-400: #e4bc5e;
+  --color-gold-500: #C5A059;
+  --color-gold-600: #a68444;
+  --color-gold-700: #856936;
+  --color-gold-800: #644f29;
+  --color-gold-900: #43351b;
+  --color-gold-950: #211a0d;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight font-bold text-navy;
+  }
+}
+
+.prose h1 { @apply text-navy text-4xl mb-6 font-bold leading-tight; }
+.prose h2 { @apply text-navy text-2xl mt-10 mb-4 font-bold border-b border-border pb-2; }
+.prose h3 { @apply text-navy text-xl mt-8 mb-3 font-semibold uppercase tracking-wider text-sm; }
+.prose p { @apply text-grey leading-relaxed mb-4; }
+.prose ul, .prose ol { @apply mb-6 pl-6; }
+.prose li { @apply mb-2 text-grey; }
+.prose blockquote { @apply border-l-4 border-gold bg-white p-6 my-8 shadow-sm italic; }
+.prose code { @apply bg-paper text-navy px-1.5 py-0.5 rounded font-mono text-sm border border-border; }
+.prose pre { @apply bg-white border border-border text-navy p-4 rounded-none overflow-x-auto my-6 font-mono; }
+.prose pre code { @apply bg-transparent border-none text-inherit p-0; }
+
+.category-tag {
+  @apply text-[10px] font-bold uppercase text-gold bg-accent-soft px-2 py-1 rounded inline-block mb-3 tracking-widest;
+}
+
+.formula-box {
+  @apply bg-white border-l-4 border-gold p-6 my-8 shadow-sm;
+}
+
+.data-card {
+  @apply bg-white border border-border p-6 rounded-none;
+}
+
+.data-card h3 {
+  @apply text-sm uppercase mb-4 border-b border-border pb-2 text-navy flex items-center gap-2;
+}
+
+.btn-gold {
+  @apply bg-gold text-white px-6 py-3 rounded-none font-bold uppercase text-xs tracking-widest transition-all hover:bg-gold-600;
+}
